@@ -1,0 +1,101 @@
+﻿<Window x:Class="MAIN.ApplicationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MAIN"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="Sepia Effect" Height="900" Width="900" MinHeight="900" MinWidth="900">
+    <Grid Name="OuterGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="295*" />
+            <RowDefinition Height="357*" />
+            <RowDefinition Height="232*" />
+        </Grid.RowDefinitions>
+        <Grid Name="UpperGrid" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Name="LeftUpperGrid" Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Name="TopLeftUpperStack" Grid.Row="0">
+                    <Label Content="Choose DLL" Style="{StaticResource LabelStyle}"/>
+                    <RadioButton Style="{StaticResource RadioButtonStyle}" Content="Assembly" IsChecked="{Binding SepiaType[0], Mode=TwoWay}"/>
+                    <RadioButton Style="{StaticResource RadioButtonStyle}" Content="C++" IsChecked="{Binding SepiaType[1], Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Name="MiddleLeftUpperStack" Grid.Row="1">
+                    <Label Content="Thread number (1-64)" Style="{StaticResource LabelStyle}"/>
+                    <Slider Maximum="64" Minimum="1" Value="{Binding ThreadsNumber}" Style="{StaticResource SliderStyle}" />
+                </StackPanel>
+                <StackPanel Name="BottomLeftUpperStack" Grid.Row="2">
+                    <Label Content="Sepia rate (0-80)" Style="{StaticResource LabelStyle}"/>
+                    <Slider Maximum="80" Minimum="0" Value="{Binding SepiaRate}" Style="{StaticResource SliderStyle}" />
+                </StackPanel>
+            </Grid>
+            <Grid Name="MiddleUpperGrid" Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.7*" />
+                </Grid.RowDefinitions>
+                <StackPanel Name="TopSecondMiddleUpperStack" Grid.Row="0">
+                    <Label Content="Threads number (1-64)" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Text="{Binding ThreadsNumber}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Name="BottomSecondMiddleUpperStack" Grid.Row="1">
+                    <Label Content="Sepia Rate (0-80)" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Text="{Binding SepiaRate}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Name="BottomMiddleUpperStack" Grid.Row="2">
+                    <Label Content="Time consumed (ms)" Style="{StaticResource LabelStyle}"/>
+                    <ListBox ItemsSource="{Binding AllElapsedTimes}" Style="{StaticResource ListBoxStyle}" Grid.Row="1" Grid.ColumnSpan="3">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </Grid>
+            <Grid Name="RightUpperGrid" Grid.Row="0" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Content="Load image" Grid.Row="0" Command="{Binding LoadImageCommand}" Style="{StaticResource ButtonStyle}"/>
+                <Button Content="Save effected image" Grid.Row="1" Command="{Binding SaveImageCommand}" Style="{StaticResource ButtonStyle}"/>
+                <Button Content="Execute effect" Grid.Row="2" Command="{Binding ExecuteEffectCommand}" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </Grid>
+        <Grid Name="BottomGrid" Margin="0,295,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Name="BottomLeftGrid" Grid.Column="0">
+                <Label Content="Image before" Style="{StaticResource LabelStyle}" Margin="20,0,10,0"/>
+                <Image Source="{Binding BeforeBitmapImage}" Style="{StaticResource ImageStyle}" Margin="75,29,75,28"/>
+            </Grid>
+            <Grid Name="BottomRightGrid"  Grid.Column="1" RenderTransformOrigin="0.486,0.66" Margin="10,0,-10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="101*"/>
+                    <RowDefinition Height="193*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Image after" Style="{StaticResource LabelStyle}" Margin="30,0,0,0" Grid.RowSpan="2"/>
+                <Image Source="{Binding AfterBitmapImage}" Style="{StaticResource ImageStyle}" Margin="75,29,75,28" Grid.RowSpan="2"/>
+
+                <oxy:PlotView x:Name="plotViewR" Model="{Binding PlotModelRBefore}" Grid.Row="1" RenderTransformOrigin="0.504,0.408" Margin="-453,0,579,-239" Height="234" VerticalAlignment="Bottom"/>
+                <oxy:PlotView x:Name="plotViewG" Model="{Binding PlotModelGBefore}" Grid.Row="1" RenderTransformOrigin="-0.424,1.455" Margin="-124,239,300,-239"/>
+                <oxy:PlotView x:Name="plotViewB" Model="{Binding PlotModelBBefore}" Grid.Row="1" Margin="150,234,0,-234" RenderTransformOrigin="0.509,0.485"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MAIN.exe" version="1.0.0.4" publicKeyToken="aab33b17543706eb" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MAIN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MAIN.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opcje manifestu kontroli konta użytkownika
+          Jeśli chcesz zmienić poziom kontroli konta użytkownika systemu Windows, zastąp węzeł 
+          requestedExecutionLevel jednym z następujących.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Jeśli chcesz użyć wirtualizacji plików i rejestru do celów zgodności wstecznej, 
+         usuń węzeł requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MAIN.exe" size="31160">
+      <assemblyIdentity name="MAIN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e+jwGS05JReF2y3nuFf4/HliptK/CH4MTwLvBBPudCU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.dll" size="676864">
+      <assemblyIdentity name="OxyPlot" version="2.1.2.0" publicKeyToken="638079A8F0BD61E9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>diihWV0Mqr4KKgQgeepT4VYIr0kJbBdaHV5/k/wOqPg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.Wpf.dll" size="36352">
+      <assemblyIdentity name="OxyPlot.Wpf" version="2.1.2.0" publicKeyToken="75E952BA404CDBB0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mXgNWBkbWaD0Rjp2RVHrVHNtDYAFZNeU7NKNsbFxung=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.Wpf.Shared.dll" size="41472">
+      <assemblyIdentity name="OxyPlot.Wpf.Shared" version="2.1.2.0" publicKeyToken="75E952BA404CDBB0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>b8jeWucw2coJpa5DEv4arv08Ufz49A8KQQs9bRhbUzE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MAIN.exe.config" size="184">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FihlZtVNgcNyH37Pf0Jtll3jZOm+L55ijXNjtoS2/mo=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOPEK\wojcz" issuerKeyHash="b8c5ca342a83b223a090e4f4054f5a23af396df1" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>H4ZdrqFGjbQmoxXekOKQP0XgFs1jkZWihbrXUkZ8iNY=</DigestValue></Reference></SignedInfo><SignatureValue>k7OaNsN047sAZRHz10w8OGB10oK/l8190GRUi+AXsmncPoj16o+LfDlGsUAn9z2/a4ySCVx19pYuMPyq/WHH9kZ3/YF0jUL5GqQ1oTY5e7wg0ZcZQl18hahr6n5jSZwcywVZ9uGKJmok6AJ5uWOWW0Wdzgwa5h1xhCpxWaT1+LU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>5wuL8GwVjpou0OtT6hnriWHS1V+70vyXOkUtJU0sBnAwVBZ59iU4j7Jf7/J+6RSKabWpWWVZBP61Z7sXyIn6+QqbpnpdeNlq9Hs3iJJUlBIsPrW9VvQ/LneWAjvR4HLVKu1XPwz1HK19FufpCh2zoCQVkQFzPBfjcvAKd7Rf1Fk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d6887c4652d7ba85a2959163cd16e0453f90e290de15a326b48d46a1ae5d861f" Description="" Url=""><as:assemblyIdentity name="MAIN.exe" version="1.0.0.4" publicKeyToken="aab33b17543706eb" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOPEK\wojcz</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Ph18Qn5bQZtzy7heGtPKsFMrayCO0jKd50aWhCt5hPM=</DigestValue></Reference></SignedInfo><SignatureValue>aeTjV161yrZIsFiadXGlvnqsvHlFVJqXQ7wkWBYCHPo/c8iVESr1nPNtDkZIlJluJSUP0+9DvAaNm7ir9DXiYWrmu1N/JWRgaP26rzbjpXMGg79BVQhqTkO/OVsBPMhoVQqIhHNlCk8ReTZINSFe/cbWxAZtUuxMXi8/AGnHu48=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>5wuL8GwVjpou0OtT6hnriWHS1V+70vyXOkUtJU0sBnAwVBZ59iU4j7Jf7/J+6RSKabWpWWVZBP61Z7sXyIn6+QqbpnpdeNlq9Hs3iJJUlBIsPrW9VvQ/LneWAjvR4HLVKu1XPwz1HK19FufpCh2zoCQVkQFzPBfjcvAKd7Rf1Fk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQG5KG6mofpI9O0oFc9ef9MDANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwATABBAFAAVABPAFAARQBLAFwAdwBvAGoAYwB6MB4XDTI0MDEyODE1MzUwNloXDTI1MDEyNzIxMzUwNlowJzElMCMGA1UEAx4cAEwAQQBQAFQATwBQAEUASwBcAHcAbwBqAGMAejCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA5wuL8GwVjpou0OtT6hnriWHS1V+70vyXOkUtJU0sBnAwVBZ59iU4j7Jf7/J+6RSKabWpWWVZBP61Z7sXyIn6+QqbpnpdeNlq9Hs3iJJUlBIsPrW9VvQ/LneWAjvR4HLVKu1XPwz1HK19FufpCh2zoCQVkQFzPBfjcvAKd7Rf1FkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAR0gElk23HjbkYTRo1G28YJDXqvtz67ZrsJ9y5qVJI3KHSO9aIXEdTdcSmtASXAZmfzuz4qzTp5ComDAojXlnHF8HzjhwneB2HmMvv2AmtzbbU1DER3y66+SPVLxnd+/HZpKTnWqneSpiVlBq1IOQtYMU5iDOohkrWg+oOAWhf7A==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,3 @@
+﻿     Trwa tworzenie biblioteki C:\Users\wojcz\Desktop\Sepia_JA\MAIN\x64\Release\DLL_ASM.lib i obiektu C:\Users\wojcz\Desktop\Sepia_JA\MAIN\x64\Release\DLL_ASM.exp
+  LINK : określono opcję /LTCG, lecz generowanie kodu nie było wymagane; usuń opcję /LTCG z wiersza polecenia konsolidatora w celu podwyższenia wydajności konsolidatora
+  DLL_ASM.vcxproj -> C:\Users\wojcz\Desktop\Sepia_JA\MAIN\x64\Release\DLL_ASM.dll
